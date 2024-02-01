@@ -1,0 +1,27 @@
+.list {
+  list-style: none;
+}
+.item {
+  border-bottom: 1px solid grey;
+  margin-bottom: 15px;
+}
+.authorImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  border: 1px solid rgb(129, 129, 129);
+  margin-right: 5px;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  border: 1px solid rgb(129, 129, 129);
+}
+
+.author {
+  font-weight: 600;
+}

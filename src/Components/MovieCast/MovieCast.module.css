@@ -1,0 +1,43 @@
+.castList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+}
+.castItem {
+  width: 120px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.castImage {
+  width: 100px;
+  border-radius: 5%;
+}
+
+.icon {
+  height: 150px;
+  width: 100px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.text {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+.character {
+  margin: 0px;
+  font-weight: 600;
+}
