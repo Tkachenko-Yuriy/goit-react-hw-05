@@ -1,9 +1,11 @@
 .list {
   list-style: none;
+  padding: 0px 60px;
 }
 .item {
   border-bottom: 1px solid grey;
   margin-bottom: 15px;
+
 }
 .authorImage {
   width: 30px;
@@ -24,4 +26,12 @@
 
 .author {
   font-weight: 600;
+}
+
+.content{
+  text-align: justify;
+}
+
+.message {
+  margin: 0px 0px 0px 70px;
 }

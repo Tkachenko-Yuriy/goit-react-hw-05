@@ -7,19 +7,15 @@ import css from "./MovieCast.module.css";
 export default function MovieCast() {
   const { moviesId } = useParams();
   const [movieCast, setMovieCast] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchMovieCredits() {
       try {
-        setLoading(true);
         const response = await fetchCreditsMovie(moviesId);
         setMovieCast(response.cast);
       } catch (error) {
         setError(error.message);
-      } finally {
-        setLoading(false);
       }
     }
     fetchMovieCredits();
@@ -30,9 +26,8 @@ export default function MovieCast() {
   return (
     <>
       {error && <p className="error-message">Помилка: {error}</p>}
-      {loading && <p>Loading...</p>}
-      {movieCast.length > 0 && (
-        <ul className={css.castList}>
+      {/* {loading && <p>Loading...</p>} */}
+      {movieCast.length > 0 ? (<ul className={css.castList}>
           {shortAcrorsList.map(({ cast_id, character, name, profile_path }) => (
             <li key={cast_id} className={css.castItem}>
               <div>
@@ -53,8 +48,9 @@ export default function MovieCast() {
               </div>
             </li>
           ))}
-        </ul>
-      )}
+        </ul>)
+      : (<p className={css.message}>Інформація акторський склад фільму відсутня.</p>)
+      }
     </>
   );
 }

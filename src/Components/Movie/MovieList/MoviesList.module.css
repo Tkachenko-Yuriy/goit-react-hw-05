@@ -14,7 +14,15 @@
   margin-left: 8px;
   margin-bottom: 16px;
   flex-basis: calc(100% / 6 - 25px);
-  border: 1px solid black;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4), 0 28px 30px rgba(0, 0, 0, 0.3);
+  scale: 0.95;
+  transition-duration: 300ms;
+}
+
+.movieItem:hover {
+  transition-duration: 500ms;
+  scale: 1;
+  box-shadow: 5px 5px 39px 7px rgba(247, 153, 12, 0.55);
 }
