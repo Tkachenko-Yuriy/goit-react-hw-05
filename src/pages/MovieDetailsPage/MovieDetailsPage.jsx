@@ -46,13 +46,11 @@ export default function MovieDetailsPage() {
       ? `https://image.tmdb.org/t/p/w500/${poster_path}`
       : defaultImage;
 
-  // const backLinkHref = useRef(location.state?.from ?? '/');
-  const backLinkHref = location.state?.from ?? "/";
+  const backLinkHref = useRef(location.state?.from ?? '/');
 
   return (
     <>
-    <Link to={backLinkHref} className={css.backLink}>Back</Link>
-      {/* <Link className={css.backLink} to={backLinkHref.current}>Back</Link> */}
+      <Link className={css.backLink} to={backLinkHref.current}>Back</Link>
       {error && <p className="error-message">Error: {error}</p>}
       {loading && (
         <div className="loader">
