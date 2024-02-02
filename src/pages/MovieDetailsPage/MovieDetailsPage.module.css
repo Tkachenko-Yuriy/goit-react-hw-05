@@ -1,14 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 30px;
+}
+
+.filmPoster {
+  margin-right: 20px;
+}
+
+.film_img {
+  width: 280px;
+  height: 398px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.description {
+  flex: 1;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.configuration {
+  margin-bottom: 15px;
+}
+
+.configurationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.configurationIitem {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 5px;
+}
+
+.itemTitle {
+  margin: 5px 5px;
+}
+.originalTitle {
+  font-weight: 600;
+  margin: 5px 5px;
+}
+
+.secondTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
 .list {
   list-style: none;
 }
 
-.backLink {
+.backLink{
   margin-left: 15px;
   padding: 3px 15px;
   border: 1px solid grey;
   border-radius: 20px;
+
 }
 
-.backLink:hover {
+.backLink:hover{
   border: 1px solid rgb(172, 175, 2);
 }
