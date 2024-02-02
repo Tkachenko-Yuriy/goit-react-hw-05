@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { AiOutlineUser } from "react-icons/ai";
 import fetchCreditsMovie from "../fetchApi/fetchCreditsMovie";
-
 import css from "./MovieCast.module.css";
 
 export default function MovieCast() {
