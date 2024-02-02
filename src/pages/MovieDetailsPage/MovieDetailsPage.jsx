@@ -46,17 +46,13 @@ export default function MovieDetailsPage() {
       ? `https://image.tmdb.org/t/p/w500/${poster_path}`
       : defaultImage;
 
-  const getBackPath = () => {
-    if (location.pathname.includes("/movies")) {
-      return "/movies";
-    } else {
-      return "/";
-    }
-  };
-  const backLinkLocationRef = useRef(location.state?.from ?? getBackPath());
+  const backLinkHref = useRef(location.state?.from ?? "/");
+
   return (
     <>
-      <Link to={backLinkLocationRef.current}>Back to collections </Link>
+      <Link className={css.backLink} to={backLinkHref.current}>
+        Back
+      </Link>
       {error && <p className="error-message">Error: {error}</p>}
       {loading && (
         <div className="loader">

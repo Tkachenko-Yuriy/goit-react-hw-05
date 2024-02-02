@@ -3,7 +3,6 @@ import { ThreeDots } from "react-loader-spinner";
 import InfiniteScroll from "react-infinite-scroll-component";
 import fetchTrendingMovie from "../../Components/fetchApi/fetchTrendingMovie";
 import MovieList from "../../Components/Movie/MovieList/MovieList";
-// import css from "./Home.module.css"
 
 export default function Home() {
   const [trendingMovies, setTrendingMovies] = useState([]);

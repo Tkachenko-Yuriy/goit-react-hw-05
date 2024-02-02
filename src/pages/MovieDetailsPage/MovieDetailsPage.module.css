@@ -60,3 +60,14 @@
 .list {
   list-style: none;
 }
+
+.backLink{
+  margin-left: 15px;
+  padding: 3px 15px;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.backLink:hover{
+  border: 1px solid rgb(172, 175, 2);
+}
