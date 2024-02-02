@@ -32,7 +32,7 @@ export default function MovieCast() {
     <>
       {error && <p className="error-message">Помилка: {error}</p>}
       {loading && <p>Loading...</p>}
-      {!error && !loading && (
+      {movieCast.length > 0 && (
         <ul className={css.castList}>
           {shortAcrorsList.map(({ cast_id, character, name, profile_path }) => (
             <li key={cast_id} className={css.castItem}>
