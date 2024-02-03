@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { useParams, Link, Outlet, useLocation } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 import MovieDetails from "../../Components/Movie/MovieDetails/MovieDetails";
@@ -49,7 +49,10 @@ export default function MovieDetailsPage() {
       {!loading && movieDetail && (
         <>
           <MovieDetails items={movieDetail} />
-          <Outlet />
+
+          <Suspense fallback={<div>Loading page...</div>}>
+            <Outlet />
+          </Suspense>
         </>
       )}
       {!loading && !movieDetail && (
